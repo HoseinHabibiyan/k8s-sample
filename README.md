@@ -28,7 +28,7 @@ Ensure you have the following tools installed:
 
 ### 1. Create a Kind Cluster
 ```bash
-kind create cluster --name myapp
+kind create cluster --name kind-myapp
 ```
 ### 2. Build the Docker Image
 ```bash
@@ -38,7 +38,7 @@ docker build . -t myapp
 ### 3. Load Image into Kind
 ###### Note: Since Kind runs locally, it cannot pull images from Docker Hub unless they are public. You must manually load your local image into the Kind nodes:
 ```bash
-kind load docker-image myapp --name myapp
+kind load docker-image myapp --name kind-myapp
 ```
 
 ### 4. Deploy app using Helm
